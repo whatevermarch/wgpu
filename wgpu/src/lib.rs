@@ -808,6 +808,9 @@ impl Drop for ShaderModule {
     }
 }
 
+#[cfg(any(feature = "glsl", feature = "naga"))]
+pub extern crate naga;
+
 /// Source of a shader module.
 ///
 /// The source will be parsed and validated.
